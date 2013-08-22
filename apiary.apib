@@ -1,0 +1,55 @@
+HOST: https://data.brightcove.com/analytics-api/videocloud
+
+--- Analytics API v1 ---
+---
+Welcome to the our sample API documentation. All comments can be written in (support [Markdown](http://daringfireball.net/projects/markdown/syntax) syntax)
+---
+
+--
+Report Resources
+The following is a section of resources related to analytics reports
+
+Parameters:
+
+* dimensions (required): the dimension(s) to report on
+--
+List products added into your shopping-cart. (comment block again in Markdown)
+GET /account/{accountId}/report?dimensions={dimensions}&where={where}&limit={limit}&offset={offset}&from={from}&to={to}&sort={sort}
+< 200
+< Content-Type: application/json
+{
+    "account": "20318290001",
+    "item_count": 123,
+    "items": [
+        {
+            "video": "2127145422001",
+            "video_duration": "124",
+            "video_engagement_1": 0,
+            "video_engagement_25": 4,
+            "video_engagement_50": 2,
+            "video_engagement_75": 2,
+            "video_engagement_100": 2,
+            "video_impression": 65,
+            "video_name": "Creating a Playlist (Japanese)",
+            "video_percent_viewed": 297.81667977970096,
+            "video_seconds_viewed": 369,
+            "video_view": 9
+        }
+    ]
+}
+
+Save new products in your shopping cart
+POST /shopping-cart
+> Content-Type: application/json
+{ "product":"1AB23ORM", "quantity": 2 }
+< 201
+< Content-Type: application/json
+{ "status": "created", "url": "/shopping-cart/2" }
+
+
+-- Payment Resources --
+This resource allows you to submit payment information to process your *shopping cart* items
+POST /payment
+{ "cc": "12345678900", "cvc": "123", "expiry": "0112" }
+< 200
+{ "receipt": "/payment/receipt/1" }
