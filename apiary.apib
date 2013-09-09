@@ -51,48 +51,49 @@ Reports return analytics data on one or more dimensions
             + `device_type`
             + `device_os`
     + where
-    Filters for the report in the form *dimension1==value1;dimension2==value2*
+    &mdash; Filters for the report in the form *dimension1==value1;dimension2==value2*
         + Type: string
         + Optional
         + Default: `[none]`
         + Example: `video==123455;player==67890;search_terms==brightcove`
     + from
-    Start time for the period covered by the report &mdash; either epoch time in milliseconds or `alltime`
+    &mdash; Start time for the period covered by the report &mdash; either epoch time in milliseconds or `alltime`
         + Type: string
         + Optional
         + Default: `[30 days before now]`
         + Example: `from=1375761600000` or `from=alltime`
     + to
-    End time for the period covered by the report &mdash; either epoch time in milliseconds or *now*
+    &mdash; End time for the period covered by the report &mdash; either epoch time in milliseconds or *now*
         + Type: string
         + Optional
         + Default: `now`
         + Example: `to=1375761600000` or `to=now`
-    + limit (number, optional) The number of results to return &mdash; an integer greater than 0
+    + limit
+    &mdash; The number of results to return &mdash; an integer greater than 0
         + Type: number
         + Optional
         + Default: `10`
         + Example: `limit=25`
     + offset
-    The number of results to skip &mdash; an integer greater than or equal to 0
+    &mdash; The number of results to skip &mdash; an integer greater than or equal to 0
         + Type: number
         + Optional
         + Default: `0`
         + Example: `offset=50`
     + fields
-    The [metrics](#metrics) to return &mdash; one or more metrics as a comma-delimited list
+    &mdash; The [metrics](#metrics) to return &mdash; one or more metrics as a comma-delimited list
         + Type: string
         + Optional
         + Default: `[all fields available for the dimension(s)]`
         + Example: `fields=video_view,video_impression,video_percent_viewed`
     + sort
-    The metric field to sort the results on. For allowable values see the [metrics](#metrics) returned for different reports
+    &mdash;s The metric field to sort the results on. For allowable values see the [metrics](#metrics) returned for different reports
         + Type: string
         + Optional
         + Default: `[none]`
         + Example: sort=video_view
     + format
-    The format to return the results in &mdash; *json*, *csv*, or *xlsx*
+    &mdash; The format to return the results in &mdash; *json*, *csv*, or *xlsx*
         + Type: string
         + Optional
         + Default: `json`
