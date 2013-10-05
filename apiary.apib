@@ -20,7 +20,7 @@ The base URL for the Analytics API is:
 
 https://data.brightcove.com/analytics-api/videocloud
 
-### <a id="metrics"></a>Available Metrics (by report type) ###
+### <a id="metrics"></a>Available Metrics (by report type) ##
 
 | Metric                | Player    | Video    | Referrer_domain    | Search_terms | Account Rollup   |
 | -----                 | :----:    | :---:    | :-------------:    | :----------: | :------------:   |
@@ -37,14 +37,14 @@ https://data.brightcove.com/analytics-api/videocloud
 | bytes_stored          |           |          |                    |              |  **x**           |
 | bytes_player          |           |          |                    |              |  **x**           |
 
-# Report [/account/{accountId}/report]
+# Report [/account/{accountId}/report{?dimensions&where&from&to&limit&offset&fields&sort&format}]
 
 Reports return analytics data on one or more dimensions
 
 + Parameters
-    + dimensions (required, string, `dimensions=video,player`) The dimesion(s) to report on &mdash; one or more in a comma-delimited list
 
-        + Values:
+    + dimensions (required, string, `video,player`) ... The dimesion(s) to report on &mdash; one or more in a comma-delimited list
+        + Values
             + `video`
             + `player`
             + `referrer_domain`
@@ -53,23 +53,23 @@ Reports return analytics data on one or more dimensions
             + `device_type`
             + `device_os`
             
-    + where (optional, string, `video==123455;player==67890;search_terms==brightcove`) Filters for the report in the form *dimension1==value1;dimension2==value2*
+    + where (optional, string, `video==123455;player==67890;search_terms==brightcove`) ... Filters for the report in the form *dimension1==value1;dimension2==value2*
 
-    + from = `30 days before now` (optional, string, `1375761600000`) Start time for the period covered by the report &mdash; either epoch time in milliseconds or `alltime`
+    + from = `30 days before now` (optional, string, `1375761600000`) ... Start time for the period covered by the report &mdash; either epoch time in milliseconds or `alltime`
 
-    + to = `now` (optional, string, `1375761600000`) End time for the period covered by the report &mdash; either epoch time in milliseconds or `now`
+    + to = `now` (optional, string, `1375761600000`) ... End time for the period covered by the report &mdash; either epoch time in milliseconds or `now`
 
-    + limit = `10` (optional, number, `25`) The number of results to return &mdash; an integer greater than 0
+    + limit = `10` (optional, number, `25`) ... The number of results to return &mdash; an integer greater than 0
 
-    + offset = `0` (optional, number, `50`) The number of results to skip &mdash; an integer greater than or equal to 0
+    + offset = `0` (optional, number, `50`) ... The number of results to skip &mdash; an integer greater than or equal to 0
 
-    + fields = `[all fields available]` (optional, string, `video_view,video_impression,video_percent_viewed`) The [metrics](#metrics) to return &mdash; one or more metrics as a comma-delimited list
+    + fields = `[all fields available]` (optional, string, `video_view,video_impression,video_percent_viewed`) ... The [metrics](#metrics) to return &mdash; one or more metrics as a comma-delimited list
 
-    + sort (optional, string, `video_view`) The metric field to sort the results on. For allowable values see the [metrics](#metrics) returned for different reports
+    + sort (optional, string, `video_view`) ... The metric field to sort the results on. For allowable values see the [metrics](#metrics) returned for different reports
 
-    + format = `json` (optional, string, `csv`) The format to return the results in &mdash; *json*, *csv*, or *xlsx*
+    + format = `json` (optional, string, `csv`) ... The format to return the results in &mdash; *json*, *csv*, or *xlsx*
 
-        + Values:
+        + Values
             + `json`
             + `csv`
             + `xlsx`
@@ -111,21 +111,21 @@ Reports return analytics data on one or more dimensions
         }
         ```
 
-# Rollup [/account/{accountId}]
+# Rollup [/account/{accountId}{?where&from&to&limity&offset}]
 
 Account rollup requests return a summary of analytics data for the account. See the [metrics](#metrics) section for details of what metrics are included.
 
 + Parameters
 
-    + where (optional, string, `video==123455;player==67890;search_terms==brightcove`) Filters for the report in the form *dimension1==value1;dimension2==value2*
+    + where (optional, string, `video==123455;player==67890;search_terms==brightcove`) ... Filters for the report in the form *dimension1==value1;dimension2==value2*
 
-    + from = `30 days before now` (optional, string, `1375761600000`) Start time for the period covered by the report &mdash; either epoch time in milliseconds or `alltime`
+    + from = `30 days before now` (optional, string, `1375761600000`) ... Start time for the period covered by the report &mdash; either epoch time in milliseconds or `alltime`
 
-    + to = `now` (optional, string, `1375761600000`) End time for the period covered by the report &mdash; either epoch time in milliseconds or `now`
+    + to = `now` (optional, string, `1375761600000`) ... End time for the period covered by the report &mdash; either epoch time in milliseconds or `now`
 
-    + limit = `10` (optional, number, `25`) The number of results to return &mdash; an integer greater than 0
+    + limit = `10` (optional, number, `25`) ... The number of results to return &mdash; an integer greater than 0
 
-    + offset = `0` (optional, number, `50`) The number of results to skip &mdash; an integer greater than or equal to 0
+    + offset = `0` (optional, number, `50`) ... The number of results to skip &mdash; an integer greater than or equal to 0
 
 
 ## GET
