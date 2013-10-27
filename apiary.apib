@@ -42,70 +42,43 @@ https://data.brightcove.com/analytics-api/videocloud
 Reports return analytics data on one or more dimensions
 
 + Parameters
-    + dimensions
-     &mdash; The dimesion(s) to report on &mdash; one or more in a comma-delimited list
-
-        + Type: string
-        + Required
-        + Default: `[none]`
-        + Example: `dimensions=video,player`
-        + Values:
-            + `video`
+    + dimensions (required, string, `video,player`) ... The dimesion(s) to report on *one or more* in a comma-delimited list
+        + values
+            + `day`
+            + `device_os`
+            + `device_type`
             + `player`
             + `referrer_domain`
             + `search_terms`
             + `source_type`
-            + `device_type`
-            + `device_os`
-    + where
-    &mdash; Filters for the report in the form *dimension1==value1;dimension2==value2*
-        + Type: string
-        + Optional
-        + Default: `[none]`
-        + Example: `video==123455;player==67890;search_terms==brightcove`
-    + from
-    &mdash; Start time for the period covered by the report &mdash; either epoch time in milliseconds or `alltime`
-        + Type: string
-        + Optional
-        + Default: `[30 days before now]`
-        + Example: `from=1375761600000` or `from=alltime`
-    + to
-    &mdash; End time for the period covered by the report &mdash; either epoch time in milliseconds or *now*
-        + Type: string
-        + Optional
-        + Default: `now`
-        + Example: `to=1375761600000` or `to=now`
-    + limit
-    &mdash; The number of results to return &mdash; an integer greater than 0
-        + Type: number
-        + Optional
-        + Default: `10`
-        + Example: `limit=25`
-    + offset
-    &mdash; The number of results to skip &mdash; an integer greater than or equal to 0
-        + Type: number
-        + Optional
-        + Default: `0`
-        + Example: `offset=50`
-    + fields
-    &mdash; The [metrics](#metrics) to return &mdash; one or more metrics as a comma-delimited list
-        + Type: string
-        + Optional
-        + Default: `[all fields available for the dimension(s)]`
-        + Example: `fields=video_view,video_impression,video_percent_viewed`
-    + sort
-    &mdash;s The metric field to sort the results on. For allowable values see the [metrics](#metrics) returned for different reports
-        + Type: string
-        + Optional
-        + Default: `[none]`
-        + Example: sort=video_view
-    + format
-    &mdash; The format to return the results in &mdash; *json*, *csv*, or *xlsx*
+            + `video`
+    + where (optional, string, `video==123455;player==67890;search_terms==brightcove`) ... Filters for the report in the form `dimension1==value1;dimension2==value2`
+    + from=`[30 days before now]` (optional, number, `1375761600000`) ... Start time for the period covered by the report &mdash; either epoch time in milliseconds or `alltime`
+    + to=`now` (optional, number, `1375761600000`) ... End time for the period covered by the report &mdash; either epoch time in milliseconds or `now`
+    + limit=`10` (optional, number, `50`) ... The number of results to return &mdash; an integer greater than 0
+    + offset=`0` (optional, number, `50`) ... The number of results to skip &mdash; an integer greater than or equal to 0
+    + fields (optional, string, `video_view,video_impression,video_percent_viewed`) ... The metrics to return &mdash; one or more metrics as a comma-delimited list &mdash; for allowable values see [metrics](#metrics)
+        + values
+            + `player_load`
+            + `video_impression`
+            + `video_view`
+            + `video_engagement`
+            + `video_percent_viewed`
+            + `video_seconds_viewed`
+    + sort (optional, string, `video_view`) ... The metric field to sort the results on. For allowable values see the [metrics](#metrics) returned for different reports
+        + values
+            + `player_load`
+            + `video_impression`
+            + `video_view`
+            + `video_engagement`
+            + `video_percent_viewed`
+            + `video_seconds_viewed`
+    + format=`json` (optional, string, 'csv') ... The format to return the results in `json`, `csv`, or `xlsx`
         + Type: string
         + Optional
         + Default: `json`
         + Example: `format=csv`
-        + Values:
+        + values
             + `json`
             + `csv`
             + `xlsx`
@@ -152,37 +125,12 @@ Reports return analytics data on one or more dimensions
 Account rollup requests return a summary of analytics data for the account. See the [metrics](#metrics) section for details of what metrics are included.
 
 + Parameters
-    + where
-    &mdash; Filters for the report in the form *dimension1==value1;dimension2==value2*
-        + Type: string
-        + Optional
-        + Default: `[none]`
-        + Example: `video==123455;player==67890;search_terms==brightcove`
-    + from
-    &mdash; Start time for the period covered by the report &mdash; either epoch time in milliseconds or `alltime`
-        + Type: string
-        + Optional
-        + Default: `[30 days before now]`
-        + Example: `from=1375761600000` or `from=alltime`
-    + to
-    &mdash; End time for the period covered by the report &mdash; either epoch time in milliseconds or *now*
-        + Type: string
-        + Optional
-        + Default: `now`
-        + Example: `to=1375761600000` or `to=now`
-    + limit
-    &mdash; The number of results to return &mdash; an integer greater than 0
-        + Type: number
-        + Optional
-        + Default: `10`
-        + Example: `limit=25`
-    + offset
-    &mdash; The number of results to skip &mdash; an integer greater than or equal to 0
-        + Type: number
-        + Optional
-        + Default: `0`
-        + Example: `offset=50`
-
+    + where (optional, string, `video==123455;player==67890;search_terms==brightcove`) ... Filters for the report in the form `dimension1==value1;dimension2==value2`
+    + from=`[30 days before now]` (optional, number, `1375761600000`) ... Start time for the period covered by the report &mdash; either epoch time in milliseconds or `alltime`
+    + to=`now` (optional, number, `1375761600000`) ... End time for the period covered by the report &mdash; either epoch time in milliseconds or `now`
+    + limit=`10` (optional, number, `50`) ... The number of results to return &mdash; an integer greater than 0
+    + offset=`0` (optional, number, `50`) ... The number of results to skip &mdash; an integer greater than or equal to 0
+    
 ## GET
 
 + Headers
