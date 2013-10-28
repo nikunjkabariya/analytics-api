@@ -52,12 +52,12 @@ Reports return analytics data on one or more dimensions
             + `search_terms`
             + `source_type`
             + `video`
-    + where (optional, string, `video==123455;player==67890;search_terms==brightcove`) ... Filters for the report in the form `dimension1==value1;dimension2==value2`
+    + where (optional, string, `video==123455;player==67890`) ... Filters for the report in the form `dimension1==value1;dimension2==value2`
     + from=`[30 days before now]` (optional, number, `1375761600000`) ... Start time for the period covered by the report &mdash; either epoch time in milliseconds or `alltime`
     + to=`now` (optional, number, `1375761600000`) ... End time for the period covered by the report &mdash; either epoch time in milliseconds or `now`
     + limit=`10` (optional, number, `50`) ... The number of results to return &mdash; an integer greater than 0
     + offset=`0` (optional, number, `50`) ... The number of results to skip &mdash; an integer greater than or equal to 0
-    + fields (optional, string, `video_view,video_impression,video_percent_viewed`) ... The metrics to return &mdash; one or more metrics as a comma-delimited list &mdash; for allowable values see [metrics](#metrics)
+    + fields (optional, string, `video_view,video_percent_viewed`) ... The metrics to return &mdash; one or more metrics as a comma-delimited list &mdash; for allowable values see [metrics](#metrics)
         + values
             + `player_load`
             + `video_impression`
@@ -86,9 +86,9 @@ Reports return analytics data on one or more dimensions
     Authorization: Bearer 15075c51ae4b0af095c9a619a
     ```
 
-+ Request 
++ Request
     ```
-    
+
     ```
 + Response 200 (application/json;charset=UTF-8)
     + Body
@@ -121,12 +121,12 @@ Reports return analytics data on one or more dimensions
 Account rollup requests return a summary of analytics data for the account. See the [metrics](#metrics) section for details of what metrics are included.
 
 + Parameters
-    + where (optional, string, `video==123455;player==67890;search_terms==brightcove`) ... Filters for the report in the form `dimension1==value1;dimension2==value2`
+    + where (optional, string, `video==123455;player==67890`) ... Filters for the report in the form `dimension1==value1;dimension2==value2`
     + from=`[30 days before now]` (optional, number, `1375761600000`) ... Start time for the period covered by the report &mdash; either epoch time in milliseconds or `alltime`
     + to=`now` (optional, number, `1375761600000`) ... End time for the period covered by the report &mdash; either epoch time in milliseconds or `now`
     + limit=`10` (optional, number, `50`) ... The number of results to return &mdash; an integer greater than 0
     + offset=`0` (optional, number, `50`) ... The number of results to skip &mdash; an integer greater than or equal to 0
-    
+
 ## GET
 
 + Headers
@@ -134,13 +134,13 @@ Account rollup requests return a summary of analytics data for the account. See 
     Authorization: Bearer 15075c51ae4b0af095c9a619a
     ```
 
-+ Request 
++ Request
     ```
-    
+
     ```
 + Response 200 (application/json;charset=UTF-8)
     + Body
-    
+
         ```
         {
             "video": "2423810273001",
