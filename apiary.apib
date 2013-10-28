@@ -37,7 +37,7 @@ https://data.brightcove.com/analytics-api/videocloud
 | bytes_stored          |           |          |                    |              |  **x**           |
 | bytes_player          |           |          |                    |              |  **x**           |
 
-# Report [/account/{account-id}/report?dimensions&where&from&to&limit&offset&sort]
+# Report [/account/{account-id}/report?dimensions&where&from&to&limit&offset&sort&fields&format]
 
 Reports return analytics data on one or more dimensions
 
@@ -73,7 +73,7 @@ Reports return analytics data on one or more dimensions
             + `video_engagement`
             + `video_percent_viewed`
             + `video_seconds_viewed`
-    + format=`json` (optional, string, 'csv') ... The format to return the results in `json`, `csv`, or `xlsx`
+    + format=`json` (optional, string, `csv`) ... The format to return the results in `json`, `csv`, or `xlsx`
         + values
             + `json`
             + `csv`
@@ -116,7 +116,7 @@ Reports return analytics data on one or more dimensions
         }
         ```
 
-# Rollup [/account/{account-id}]
+# Rollup [/account/{account-id}?where&from&to&limit&offset]
 
 Account rollup requests return a summary of analytics data for the account. See the [metrics](#metrics) section for details of what metrics are included.
 
