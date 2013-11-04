@@ -23,40 +23,40 @@ The base URL for the Analytics API is:
 ## <a id="metrics"></a>Available Metrics (by report type) ##
 
 
-| Metric               | account | player | video | day   | referrer_domain | source_type | search_terms | device_type | device_os |
-| :-----               | :----:  | :----: | :---: | :---: | :----------:    | :-------:   | :----------: | :---------: | :-------: |
-| account              |  **x**  |        |       |       |                 |             |              |             |           |
-| active_media         |  **x**  |        |       | **x** |                 |             |              |             |           |
-| bytes_delivered      |  **x**  |        |       | **x** |                 |             |              |             |           |
-| bytes_in             |  **x**  |        |       | **x** |                 |             |              |             |           |
-| bytes_out            |  **x**  |        |       | **x** |                 |             |              |             |           |
-| bytes_overhead       |  **x**  |        |       | **x** |                 |             |              |             |           |
-| bytes_player         |  **x**  |        |       | **x** |                 |             |              |             |           |
-| bytes_stored         |  **x**  |        |       | **x** |                 |             |              |             |           |
-| day                  |         |        |       | **x** |                 |             |              |             |           |
-| device_type          |         |        |       |       |                 |             |              | **x**       |           |
-| device_os            |         |        |       |       |                 |             |              |             | **x**     |
-| engagement_score     |  **x**  | **x**  | **x** | **x** | **x**           | **x**       | **x**        | **x**       | **x**     |
-| video_engagement_1   |  **x**  | **x**  | **x** |       |                 |             |              |             |           |
-| video_engagement_25  |  **x**  | **x**  | **x** |       |                 |             |              |             |           |
-| video_engagement_50  |  **x**  | **x**  | **x** |       |                 |             |              |             |           |
-| video_engagement_75  |  **x**  | **x**  | **x** |       |                 |             |              |             |           |
-| video_engagement_100 |  **x**  | **x**  | **x** |       |                 |             |              |             |           |
-| player               |         | **x**  |       |       |                 |             |              |             |           |
-| player_name          |         | **x**  |       |       |                 |             |              |             |           |
-| play_rate            |  **x**  | **x**  | **x** | **x** | **x**           | **x**       | **x**        | **x**       | **x**     |
-| player_load          |  **x**  | **x**  |       | **x** | **x**           | **x**       | **x**        | **x**       | **x**     |
-| referrer_domain      |         |        |       |       | **x**           |             |              |             |           |
-| search_terms         |         |        |       |       |                 |             | **x**        |             |           |
-| source_type          |         |        |       |       |                 | **x**       |              |             |           |
-| video                |         |        | **x** |       |                 |             |              |             |           |
-| video_duration       |         |        | **x** |       |                 |             |              |             |           |
-| video_impression     |  **x**  | **x**  | **x** | **x** | **x**           | **x**       | **x**        | **x**       | **x**     |
-| video_name           |         |        | **x** |       |                 |             |              |             |           |
-| video_view           |  **x**  | **x**  | **x** | **x** | **x**           | **x**       | **x**        | **x**       | **x**     |
-| video_engagement     |  **x**  | **x**  | **x** | **x** |                 |             |              |             |           |
-| video_percent_viewed |  **x**  | **x**  | **x** | **x** | **x**           | **x**       | **x**        | **x**       | **x**     |
-| video_seconds_viewed  |  **x**  | **x**  | **x** | **x** | **x**           | **x**       | **x**        | **x**       | **x**     |
+|Metric               | account | player | video | day  | referrer_domain | source_type | search_terms | device_type | device_os |
+|:-----               | :----:  | :----: | :---: | :--: | :----------:    | :-------:   | :----------: | :---------: | :-------: |
+|account              |  x      |        |       |      |                 |             |              |             |           |
+|active_media         |  x      |        |       | x    |                 |             |              |             |           |
+|bytes_delivered      |  x      |        |       | x    |                 |             |              |             |           |
+|bytes_in             |  x      |        |       | x    |                 |             |              |             |           |
+|bytes_out            |  x      |        |       | x    |                 |             |              |             |           |
+|bytes_overhead       |  x      |        |       | x    |                 |             |              |             |           |
+|bytes_player         |  x      |        |       | x    |                 |             |              |             |           |
+|bytes_stored         |  x      |        |       | x    |                 |             |              |             |           |
+|day                  |         |        |       | x    |                 |             |              |             |           |
+|device_type          |         |        |       |      |                 |             |              | x           |           |
+|device_os            |         |        |       |      |                 |             |              |             | x         |
+|engagement_score     |  x      | x      | x     | x    | x               | x            | x           | x           | x         |
+|video_engagement_1   |  x      | x      | x     |      |                 |             |              |             |           |
+|video_engagement_25  |  x      | x      | x     |      |                 |             |              |             |           |
+|video_engagement_50  |  x      | x      | x     |      |                 |             |              |             |           |
+|video_engagement_75  |  x      | x      | x     |      |                 |             |              |             |           |
+|video_engagement_100 |  x      | x      | x     |      |                 |             |              |             |           |
+|player               |         | x      |       |      |                 |             |              |             |           |
+|player_name          |         | x      |       |      |                 |             |              |             |           |
+|play_rate            |  x      | x      | x     | x    | x               | x           | x            | x           | x         |
+|player_load          |  x      | x      |       | x    | x               | x           | x            | x           | x         |
+|referrer_domain      |         |        |       |      | x               |             |              |             |           |
+|search_terms         |         |        |       |      |                 |             | x            |             |           |
+|source_type          |         |        |       |      |                 | x           |              |             |           |
+|video                |         |        | x     |      |                 |             |              |             |           |
+|video_duration       |         |        | x     |      |                 |             |              |             |           |
+|video_impression     |  x      | x      | x     | x    | x               | x           | x            | x           | x         |
+|video_name           |         |        | x     |      |                 |             |              |             |           |
+|video_view           |  x      | x      | x     | x    | x               | x           | x            | x           | x         |
+|video_engagement     |  x      | x      | x     | x    |                 |             |              |             |           |
+|video_percent_viewed |  x      | x      | x     | x    | x               | x           | x            | x           | x         |
+|video_seconds_viewed |  x      | x      | x     | x    | x               | x           | x            | x           | x         |
 
 
 # Report [/account/{account-id}/report?dimensions&where&from&to&limit&offset&sort&fields&format]
