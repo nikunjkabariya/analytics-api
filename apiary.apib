@@ -2,62 +2,9 @@ FORMAT: X-1A
 
 HOST: https://data.brightcove.com/analytics-api/videocloud
 
-# Analytics API v1
+# Analytics API v1 Reference
 
-The Analytics API allows you to obtain analytics data for your Video Cloud accounts directly. You can also view the built-in analytics reports in the Analytics Module of [Video Cloud Studio](//videocloud.brightcove.com). Accessing the data programmatically gives you additional flexibility for such purposes as:
-
-* Creating custom charts and displays
-* Merging or aggregating data from multiple accounts
-* Combining your video analytic data with other site analytics data
-* For some sample solutions, see
-    * [Most Popular Videos](//solutions.brightcove.com/bcls/analytics-api/most-popular-videos.html)
-    * [Analytics for Playlists](//solutions.brightcove.com/bcls/analytics-api/analytics-by-playlist.html)
-    * [Analytics API Request Builder](//solutions.brightcove.com/bcls/analytics-api/aapi-request-builder.html)
-
-## <a id="baseURL"></a>Base URL
-
-The base URL for the Analytics API is:
-
-    https://data.brightcove.com/analytics-api/videocloud
-
-## <a id="metrics"></a>Available Metrics (by report type) ##
-
-
-|Metric               | account | player | video | day  | referrer_domain | source_type | search_terms | device_type | device_os |
-|:-----               | :----:  | :----: | :---: | :--: | :----------:    | :-------:   | :----------: | :---------: | :-------: |
-|account              |  x      |        |       |      |                 |             |              |             |           |
-|active_media         |  x      |        |       | x    |                 |             |              |             |           |
-|bytes_delivered      |  x      |        |       | x    |                 |             |              |             |           |
-|bytes_in             |  x      |        |       | x    |                 |             |              |             |           |
-|bytes_out            |  x      |        |       | x    |                 |             |              |             |           |
-|bytes_overhead       |  x      |        |       | x    |                 |             |              |             |           |
-|bytes_player         |  x      |        |       | x    |                 |             |              |             |           |
-|bytes_stored         |  x      |        |       | x    |                 |             |              |             |           |
-|day                  |         |        |       | x    |                 |             |              |             |           |
-|device_type          |         |        |       |      |                 |             |              | x           |           |
-|device_os            |         |        |       |      |                 |             |              |             | x         |
-|engagement_score     |  x      | x      | x     | x    | x               | x            | x           | x           | x         |
-|video_engagement_1   |  x      | x      | x     |      |                 |             |              |             |           |
-|video_engagement_25  |  x      | x      | x     |      |                 |             |              |             |           |
-|video_engagement_50  |  x      | x      | x     |      |                 |             |              |             |           |
-|video_engagement_75  |  x      | x      | x     |      |                 |             |              |             |           |
-|video_engagement_100 |  x      | x      | x     |      |                 |             |              |             |           |
-|player               |         | x      |       |      |                 |             |              |             |           |
-|player_name          |         | x      |       |      |                 |             |              |             |           |
-|play_rate            |  x      | x      | x     | x    | x               | x           | x            | x           | x         |
-|player_load          |  x      | x      |       | x    | x               | x           | x            | x           | x         |
-|referrer_domain      |         |        |       |      | x               |             |              |             |           |
-|search_terms         |         |        |       |      |                 |             | x            |             |           |
-|source_type          |         |        |       |      |                 | x           |              |             |           |
-|video                |         |        | x     |      |                 |             |              |             |           |
-|video_duration       |         |        | x     |      |                 |             |              |             |           |
-|video_impression     |  x      | x      | x     | x    | x               | x           | x            | x           | x         |
-|video_name           |         |        | x     |      |                 |             |              |             |           |
-|video_view           |  x      | x      | x     | x    | x               | x           | x            | x           | x         |
-|video_engagement     |  x      | x      | x     | x    |                 |             |              |             |           |
-|video_percent_viewed |  x      | x      | x     | x    | x               | x           | x            | x           | x         |
-|video_seconds_viewed |  x      | x      | x     | x    | x               | x           | x            | x           | x         |
-
+Below are the available operations for the Analytics API
 
 # Report [/account/{account-id}/report?dimensions&where&from&to&limit&offset&sort&fields&format]
 
