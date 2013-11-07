@@ -94,7 +94,7 @@ Account rollup requests return a summary of analytics data for the account. See 
 + Parameters
     + account-id (required string `123456789`) ... The Video Cloud account id &mdash; in older versions of Studio called the Publisher ID
     + where (optional, string, `video==123455;player==67890`) ... Filters for the report in the form `dimension1==val1;dimension2==val2`
-    + from=`[30 days before now]` (optional, number, `1375761600000`) ... Start time for the period covered by the report &mdash; either epoch time in milliseconds or `alltime`
+    + from=`[30 days before now]` (optional, number, `1375761600000`) ... Start time for the period covered by the report &mdash; epoch time in milliseconds (note that `alltime` is not a valid value for rollups)
     + to=`now` (optional, number, `1375761600000`) ... End time for the period covered by the report &mdash; either epoch time in milliseconds or `now`
     + limit=`10` (optional, number, `50`) ... The number of results to return &mdash; an integer greater than 0
     + offset=`0` (optional, number, `50`) ... The number of results to skip &mdash; an integer greater than or equal to 0
