@@ -6,7 +6,7 @@ HOST: https://data.brightcove.com/analytics-api/videocloud
 
 Below are the available operations for the Analytics API
 
-# Report [/account/{accountId}/report?dimensions&where&from&to&limit&offset&sort&fields&format]
+# Report [/account/{accountId}/report{?dimensions&where&from&to&limit&offset&sort&fields&format}]
 
 Reports return analytics data on one or more dimensions
 
@@ -87,7 +87,7 @@ Reports return analytics data on one or more dimensions
         }
         ```
 
-# Rollup [/account/{accountId}?where&from&to&limit&offset]
+# Rollup [/account/{accountId}{?where&from&to&limit&offset}]
 
 Account rollup requests return a summary of analytics data for the account. See the <a class="overview-link" href="#metrics">table of available metrics by dimension</a> in the API Overview for details of what metrics are included.
 
