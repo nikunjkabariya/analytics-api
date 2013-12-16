@@ -26,7 +26,7 @@ Reports return analytics data on one or more dimensions
             + `source_type`
             + `video`
     + where (optional, string, `video==2079975065001;device_os==os_x`) ... Filters for the report in the form `where=dimension1==val1;dimension2==val2`
-    + from=`[30 days before now]` (optional, number, `2013-10-20`) ... Start time for the period covered by the report &mdash; either epoch time in milliseconds or `alltime` or  a date in the format `yyyy-mm-dd` (such as `2013-09-26`)
+    + from (optional, number, `2013-10-20`) ... Start time for the period covered by the report &mdash; either epoch time in milliseconds or `alltime` or  a date in the format `yyyy-mm-dd` (such as `2013-09-26`)
     + to=`now` (optional, string, `2013-11-20`) ... End time for the period covered by the report &mdash; either epoch time in milliseconds or `now` or  a date in the format `yyyy-mm-dd` (such as `2013-09-26`)
     + limit=`10` (optional, number, `50`) ... The number of results to return &mdash; an integer greater than 0
     + offset=`0` (optional, number, `50`) ... The number of results to skip &mdash; an integer greater than or equal to 0
