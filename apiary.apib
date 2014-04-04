@@ -11,9 +11,13 @@ The base URL for the Analytics API is:
 
     https://data.brightcove.com/analytics-api/videocloud
 
-# Group Report [/account/{accountId}/report{?dimensions}{&where}{&from}{&to}{&limit}{&offset}{&sort}{&fields}{&format}]
+# Group Report 
 
 Reports return analytics data on one or more <a href="//docs.brightcove.com/en/video-cloud/analytics-api/guides/api-overview.html#dimensionsOverview">dimensions</a>
+
+## Endpoint [/account/{accountId}/report{?dimensions}{&where}{&from}{&to}{&limit}{&offset}{&sort}{&fields}{&format}]
+
+## GET
 
 + Parameters
     + accountId (required string `20318290001`) ... The Video Cloud account id (in older versions of Studio called the Publisher ID)
@@ -59,7 +63,6 @@ Reports return analytics data on one or more <a href="//docs.brightcove.com/en/v
             + `csv`
             + `xlsx`
 
-## GET
 
 + Headers
     ```
@@ -111,9 +114,14 @@ Reports return analytics data on one or more <a href="//docs.brightcove.com/en/v
         }
         ```
 
-# Group Rollup [/account/{accountId}{?where}{&from}{&to}{&limit}{&offset}]
+# Group Rollup 
 
 Account rollup requests return a summary of analytics data for the account. See the <a href="//docs.brightcove.com/en/video-cloud/analytics-api/guides/api-overview.html#metrics">table of available metrics by dimension</a> in the API Overview for details of what metrics are included.
+
+
+## Endpoint [/account/{accountId}{?where}{&from}{&to}{&limit}{&offset}]
+
+## GET
 
 + Parameters
     + accountId (required string `20318290001`) ... The Video Cloud account id &mdash; in older versions of Studio called the Publisher ID
@@ -123,7 +131,6 @@ Account rollup requests return a summary of analytics data for the account. See 
     + limit=`10` (optional, number, `50`) ... The number of results to return &mdash; an integer greater than 0
     + offset=`0` (optional, number, `50`) ... The number of results to skip &mdash; an integer greater than or equal to 0
 
-## GET
 
 + Headers
     ```
