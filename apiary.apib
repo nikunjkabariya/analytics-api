@@ -37,11 +37,11 @@ Reports return analytics data on one or more <a href="https://docs.brightcove.co
             + `source_type`
             + `video`
     + where (optional, string, `video==2079975065001`) ... Filters for the report in the form `where=dimension1==val1;dimension2==val2`
-    + from  (optional, string, `2013-11-16`) ... Start time for the period covered by the report &mdash; epoch time in milliseconds or a date in the format `yyyy-mm-dd` (such as `2013-09-26`)
-    + to  (optional, string, `2013-11-20`) ... End time for the period covered by the report &mdash; either epoch time in milliseconds or `now` or  a date in the format `yyyy-mm-dd` (such as `2013-09-26`)
-    + limit  (optional, number, `10`) ... The number of results to return &mdash; an integer greater than 0
-    + offset  (optional, number, `0`) ... The number of results to skip &mdash; an integer greater than or equal to 0
-    + fields (optional, string, `video_view`) ... The metrics to return &mdash; one or more metrics as a comma-delimited list &mdash; for allowable values, see the <a class="overview-link" href="//docs.brightcove.com/en/video-cloud/analytics-api/guides/api-overview.html#metrics">table of available metrics by dimension</a> in the API Overview. To return all fields, use `fields=all`
+    + from = `[30 days before now]`  (optional, string, `2013-11-16`) ... Start time for the period covered by the report &mdash; epoch time in milliseconds or a date in the format `yyyy-mm-dd` (such as `2013-09-26`)
+    + to = `now`  (optional, string, `2013-11-20`) ... End time for the period covered by the report &mdash; either epoch time in milliseconds or `now` or  a date in the format `yyyy-mm-dd` (such as `2013-09-26`)
+    + limit = `10`  (optional, number, `10`) ... The number of results to return &mdash; an integer greater than 0
+    + offset = `0`  (optional, number, `0`) ... The number of results to skip &mdash; an integer greater than or equal to 0
+    + fields = `video_view` (optional, string, `video_view`) ... The metrics to return &mdash; one or more metrics as a comma-delimited list &mdash; for allowable values, see the <a class="overview-link" href="//docs.brightcove.com/en/video-cloud/analytics-api/guides/api-overview.html#metrics">table of available metrics by dimension</a> in the API Overview. To return all fields, use `fields=all`
         + values
             + `all`
             + `player_load`
@@ -58,7 +58,7 @@ Reports return analytics data on one or more <a href="https://docs.brightcove.co
             + `video_engagement`
             + `video_percent_viewed`
             + `video_seconds_viewed`
-    + format  (optional, string, `csv`) ... The format to return the results in `json`, `csv`, or `xlsx`
+    + format = `json`  (optional, string, `csv`) ... The format to return the results in `json`, `csv`, or `xlsx`
         + values
             + `json`
             + `csv`
@@ -71,7 +71,7 @@ Reports return analytics data on one or more <a href="https://docs.brightcove.co
     
     + Headers
         
-            Authorization: Bearer 15075c51ae4b0af095c9a619a
+            Authorization: Bearer {access_token}
         
 + Response 200 (application/json;charset=UTF-8)
     + Body
@@ -137,7 +137,7 @@ Account rollup requests return a summary of analytics data for the account. See 
 
     + Headers
     
-            Authorization: Bearer 15075c51ae4b0af095c9a619a
+            Authorization: Bearer {access_token}
 
 + Response 200 (application/json;charset=UTF-8)
     + Body
